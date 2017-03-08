@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>canvas画图</title>
+	<style type="text/css">
+		body{background: red;}
+		#can1{display: block;position: absolute;top: 200px;left: 200px;margin-top: -150px;margin-left: -150px; }
+		#can2{display: block;position: absolute;left: 400px;top: 80px;margin-top: -50px;margin-left: -50px;}
+		#can3{display: block;position: absolute;left: 480px;top: 160px;margin-top: -50px;margin-left: -50px;}
+		#can4{display: block;position: absolute;left: 480px;top: 280px;margin-top: -50px;margin-left: -50px;}
+		#can5{display: block;position: absolute;left: 400px;top: 360px;margin-top: -50px;margin-left: -50px;}
+	</style>
+
+</head>
+<body>
+	<canvas id="can1" width="300" height="300">
+		
+	</canvas>
+	<canvas id="can2" width="100" height="100">
+		
+	</canvas>
+	<canvas id="can3" width="100" height="100">
+		
+	</canvas>
+	<canvas id="can4" width="100" height="100">
+		
+	</canvas>
+	<canvas id="can5" width="100" height="100">
+		
+	</canvas>
+</body>
+	<script type="text/javascript">
+		var canvas1 = document.getElementById("can1");
+		var canvas2 = document.getElementById("can2");
+		var canvas3 = document.getElementById("can3");
+		var canvas4 = document.getElementById("can4");
+		var canvas5 = document.getElementById("can5");
+		var test1 = canvas1.getContext("2d");
+		var test2 = canvas2.getContext("2d");
+		var test3 = canvas3.getContext("2d");
+		var test4 = canvas4.getContext("2d");
+		var test5 = canvas5.getContext("2d");
+		// test.moveTo(10,10);
+		// test.lineTo(300,300);
+		// test.moveTo(100,20);
+		// test.lineTo(20,300);
+		// test.lineTo(10,10);
+//绘制线条:moveTo 定位起点，然后lineTo定位终点并绘制直线;
+		// test.strokeStyle = "red";
+		
+		// test.rect(30,30,100,100);
+//rect(x,y,width,height)绘制矩形,(x,y)定位图形的一个顶点	，width,height可以为负数;
+		// test.fillRect(200,200,50,50);
+		
+//rect(x,y,width,height)绘制填充过的矩形;
+		// test.strokeRect(300,300,50,50);
+		test1.beginPath();
+		for(var i = 0;i<=4;i++)
+		{
+			test1.lineTo(Math.cos((18+i*72)/180*Math.PI)*100+150,-Math.sin((18+i*72)/180*Math.PI)*100+150);
+			test1.lineTo(Math.cos((54+i*72)/180*Math.PI)*40+150,-Math.sin((54+i*72)/180*Math.PI)*40+150);
+		
+		}
+		test1.closePath();
+
+		// 2
+		test2.beginPath();
+		for(var i = 0;i<=4;i++)
+		{
+			test2.lineTo(Math.cos((211+i*72)/180*Math.PI)*50+50,-Math.sin((211+i*72)/180*Math.PI)*50+50	);
+			test2.lineTo(Math.cos((257+i*72)/180*Math.PI)*20+50,-Math.sin((257+i*72)/180*Math.PI)*20+50);
+		
+		}
+		test2.closePath();
+
+		// 3
+		test3.beginPath();
+		for(var i = 0;i<=4;i++)
+		{
+			test3.lineTo(Math.cos((188+i*72)/180*Math.PI)*50+50,-Math.sin((188+i*72)/180*Math.PI)*50+50);
+			test3.lineTo(Math.cos((224+i*72)/180*Math.PI)*20+50,-Math.sin((224+i*72)/180*Math.PI)*20+50);
+		
+		}
+		test3.closePath();
+
+		// 4
+		test4.beginPath();
+		for(var i = 0;i<=4;i++)
+		{
+			test4.lineTo(Math.cos((158+i*72)/180*Math.PI)*50+50,-Math.sin((158+i*72)/180*Math.PI)*50+50);
+			test4.lineTo(Math.cos((194+i*72)/180*Math.PI)*20+50,-Math.sin((194+i*72)/180*Math.PI)*20+50);
+		
+		}
+		test4.closePath();
+
+		//5
+		test5.beginPath();
+		for(var i = 0;i<=4;i++)
+		{
+			test5.lineTo(Math.cos((141+i*72)/180*Math.PI)*50+50,-Math.sin((141+i*72)/180*Math.PI)*50+50);
+			test5.lineTo(Math.cos((177+i*72)/180*Math.PI)*20+50,-Math.sin((177+i*72)/180*Math.PI)*20+50);
+		
+		}
+		test5.closePath();
+
+		test1.strokeStyle = test2.strokeStyle = test3.strokeStyle = test4.strokeStyle = test5.strokeStyle =  "yellow";
+		test1.fillStyle = test2.fillStyle = test3.fillStyle = test4.fillStyle = test5.fillStyle =  "yellow";
+		test1.lineWidth = test2.lineWidth = test3.lineWidth = test4.lineWidth = test5.lineWidth =  2;
+		test1.fill();
+		test2.fill();
+		test3.fill();
+		test4.fill();
+		test5.fill();
+		test1.stroke();
+		test2.stroke();
+		test3.stroke();
+		test4.stroke();
+		test5.stroke();
+	</script>
+</html>

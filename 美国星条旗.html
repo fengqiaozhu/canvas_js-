@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>美国星条旗</title>
+	<style type="text/css">
+		#america{display: block;margin: auto;}
+		body{background: #DEB887;}
+	</style>
+</head>
+<body>
+	<canvas id="america" width="1280" height="674"> 
+		
+	</canvas>
+	<script type="text/javascript">
+		var canvas = document.getElementById("america");
+		var ame = canvas.getContext("2d");
+		// ame.moveTO(0,0);
+		// ame.lineTo(0,363);
+		// ame.lineTo(512,363);
+		// ame.lineTo(512,0)
+		ame.fillStyle = "#002664";
+		ame.fillRect(0,0,512,364);
+		ame.fillStyle = "#bb133e";
+		ame.fillRect(512,0,768,52);
+		ame.fillStyle = "#fff";
+		ame.fillRect(512,52,768,52);
+		ame.fillStyle = "#bb133e";
+		ame.fillRect(512,104,768,52);
+		ame.fillStyle = "#fff";
+		ame.fillRect(512,156,768,52);
+		ame.fillStyle = "#bb133e";
+		ame.fillRect(512,208,768,52);
+		ame.fillStyle = "#fff";
+		ame.fillRect(512,260,768,52);
+		ame.fillStyle = "#bb133e";
+		ame.fillRect(512,312,768,52);
+		ame.fillStyle = "#fff";
+		ame.fillRect(0,364,1280,52);
+		ame.fillStyle = "#bb133e";
+		ame.fillRect(0,416,1280,52);
+		ame.fillStyle = "#fff";
+		ame.fillRect(0,468,1280,52);
+		ame.fillStyle = "#bb133e";
+		ame.fillRect(0,520,1280,52);
+		ame.fillStyle = "#fff";
+		ame.fillRect(0,572,1280,52);
+		ame.fillStyle = "#bb133e";
+		ame.fillRect(0,624,1280,52);
+		var odd_x = 34;
+		var odd_y = 35
+		var even_x = 76;
+		var even_y = 72;
+
+		for(var line = 1;line<=9;line++)
+		{
+			odd_x = 34;
+			even_x = 76;
+			if (line % 2 != 0) 
+			{
+				for(var j =0;j<6;j++)
+				{
+					ame.beginPath();
+					for(var i = 0;i<=4;i++)
+					{
+						ame.lineTo(Math.cos((18+i*72)/180*Math.PI)*20+odd_x,-Math.sin((18+i*72)/180*Math.PI)*20+odd_y);
+						ame.lineTo(Math.cos((54+i*72)/180*Math.PI)*8+odd_x,-Math.sin((54+i*72)/180*Math.PI)*8+odd_y);
+					}
+					ame.closePath();
+					ame.strokeStyle = "#fff";
+					ame.fillStyle = "#fff";
+					ame.fill();
+					ame.stroke();
+					odd_x += 85;
+				}
+				odd_y += 73;
+			}
+			else
+			{
+				for(var m =0;m<5;m++)
+				{
+					ame.beginPath();
+					for(var n = 0;n<=4;n++)
+					{
+						ame.lineTo(Math.cos((18+n*72)/180*Math.PI)*20+even_x,-Math.sin((18+n*72)/180*Math.PI)*20+even_y);
+						ame.lineTo(Math.cos((54+n*72)/180*Math.PI)*8+even_x,-Math.sin((54+n*72)/180*Math.PI)*8+even_y);
+					}
+					ame.closePath();
+					ame.strokeStyle = "#fff";
+					ame.fillStyle = "#fff";
+					ame.fill();
+					ame.stroke();
+					even_x += 85;
+				}
+				even_y += 73;
+			}
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+		
+	</script>
+</body>
+</html>
