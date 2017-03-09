@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>英国国旗</title>
+	<style type="text/css">
+		body{background: #DEB887;}
+		#flag{background: #00247d;display: block;margin: 50px auto;}
+	</style>
+</head>
+<body>
+	<canvas id="flag" height="640" width="1280"></canvas>
+</body>
+<script type="text/javascript">
+	var canvas = document.getElementById("flag");
+	var english = canvas.getContext("2d");
+	english.fillStyle = "#fff";
+	english.fillRect(533,0,214,640)
+	english.fillStyle = "#fff";
+	english.fillRect(0,213,1280,214)
+	english.fillStyle = "#cf142b";
+	english.fillRect(576,0,128,640)
+	english.fillStyle = "#cf142b";
+	english.fillRect(0,256,1280,128)
+
+	english.beginPath();//左上白斜
+		english.lineTo(0,0);
+		english.lineTo(0,72);
+		english.lineTo(281,214);
+		english.lineTo(533,214);
+		english.lineTo(533,194);
+		english.lineTo(143,0);
+	english.closePath();
+	english.strokeStyle = "#fff";
+	english.fillStyle = "#fff";
+	english.fill();
+	english.stroke();
+
+
+	english.beginPath();//左上红斜
+		english.lineTo(0,0);
+		english.lineTo(0,48);
+		english.lineTo(329,214);
+		english.lineTo(428,214);
+	english.closePath();
+	english.strokeStyle = "#cf142b";
+	english.fillStyle = "#cf142b";
+	english.fill();
+	english.stroke();
+
+
+
+
+	english.beginPath();//左下白斜
+		english.lineTo(0,640);
+		english.lineTo(0,568);
+		english.lineTo(281,427);
+		english.lineTo(533,427);
+		english.lineTo(533,447);
+		english.lineTo(143,640);
+	english.closePath();
+	english.strokeStyle = "#fff";
+	english.fillStyle = "#fff";
+	english.fill();
+	english.stroke();
+
+
+	english.beginPath();//左下红斜
+		english.lineTo(0,640);
+		english.lineTo(97,640);
+		english.lineTo(523,426);
+		english.lineTo(426,426);
+	english.closePath();
+	english.strokeStyle = "#cf142b";
+	english.fillStyle = "#cf142b";
+	english.fill();
+	english.stroke();
+
+
+	english.beginPath();//右下白斜
+		english.lineTo(1280,640);
+		english.lineTo(1280,568);
+		english.lineTo(999,427);
+		english.lineTo(747,427);
+		english.lineTo(747,447);
+		english.lineTo(1137,640);
+	english.closePath();
+	english.strokeStyle = "#fff";
+	english.fillStyle = "#fff";
+	english.fill();
+	english.stroke();
+
+
+	english.beginPath();//右下红斜
+		english.lineTo(1280,640);
+		english.lineTo(1280,592);
+		english.lineTo(949,426);
+		english.lineTo(852,426);
+	english.closePath();
+	english.strokeStyle = "#cf142b";
+	english.fillStyle = "#cf142b";
+	english.fill();
+	english.stroke();
+
+	english.beginPath();//右上白斜
+		english.lineTo(1280,0);
+		english.lineTo(1280,72);
+		english.lineTo(999,214);
+		english.lineTo(747,214);
+		english.lineTo(747,194);
+		english.lineTo(1137,0);
+	english.closePath();
+	english.strokeStyle = "#fff";
+	english.fillStyle = "#fff";
+	english.fill();
+	english.stroke();
+
+	english.beginPath();//右上红斜
+		english.lineTo(1280,0);
+		english.lineTo(1182,0);
+		english.lineTo(757,214);
+		english.lineTo(854,214);
+	english.closePath();
+	english.strokeStyle = "#cf142b";
+	english.fillStyle = "#cf142b";
+	english.fill();
+	english.stroke();
+</script>
+</html>
